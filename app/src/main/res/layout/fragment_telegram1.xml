@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context=".TelegramFragment1">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/collapsingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5b8fbb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu="@menu/fragment_telegram_menu"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/photoProfile"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/unnamed" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Копатыч )))"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/photoProfile"
+                app:layout_constraintTop_toTopOf="@+id/photoProfile" />
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="online"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/nameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/collapsingToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collapsingToolbar">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="14dp"
+            android:src="@drawable/ic_baseline_add_a_photo_24" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collapsingToolbar">
+
+        <TextView
+            android:id="@+id/accountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Account"
+            android:textColor="#5b8fbb"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/numberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="+7 (996) 192-30-53"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/accountTextView"
+            app:layout_constraintTop_toBottomOf="@+id/accountTextView" />
+
+        <TextView
+            android:id="@+id/numberInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Tap to change phone number"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/numberTextView"
+            app:layout_constraintTop_toBottomOf="@+id/numberTextView" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/numberInfoTextView"
+            app:layout_constraintTop_toBottomOf="@+id/numberInfoTextView" />
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="\@konokapich"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/numberTextView"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <TextView
+            android:id="@+id/usernameInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Username"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/usernameTextView"
+            app:layout_constraintTop_toBottomOf="@id/usernameTextView" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/usernameInfoTextView"
+            app:layout_constraintTop_toBottomOf="@id/usernameInfoTextView" />
+
+        <TextView
+            android:id="@+id/bioTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Копаю огород"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/usernameTextView"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.5"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Bio"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/bioTextView"
+            app:layout_constraintTop_toBottomOf="@id/bioTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <TextView
+            android:id="@+id/settingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Settings"
+            android:textColor="#5b8fbb"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/soundsImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_notifications_none_24"
+            app:layout_constraintBottom_toTopOf="@+id/securityImageView"
+            app:layout_constraintEnd_toEndOf="@+id/securityImageView"
+            app:layout_constraintStart_toStartOf="@+id/securityImageView"
+            app:layout_constraintTop_toBottomOf="@+id/settingsTextView" />
+
+        <ImageView
+            android:id="@+id/securityImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_lock_24"
+            app:layout_constraintBottom_toTopOf="@+id/dataImageView"
+            app:layout_constraintEnd_toEndOf="@+id/dataImageView"
+            app:layout_constraintStart_toStartOf="@+id/dataImageView"
+            app:layout_constraintTop_toBottomOf="@+id/soundsImageView" />
+
+        <ImageView
+            android:id="@+id/dataImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_data_usage_24"
+            app:layout_constraintBottom_toTopOf="@+id/chatSettingsImageView"
+            app:layout_constraintEnd_toEndOf="@+id/chatSettingsImageView"
+            app:layout_constraintStart_toStartOf="@+id/chatSettingsImageView"
+            app:layout_constraintTop_toBottomOf="@+id/securityImageView" />
+
+        <ImageView
+            android:id="@+id/chatSettingsImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_chat_bubble_outline_24"
+            app:layout_constraintBottom_toTopOf="@+id/chatFoldersImageView"
+            app:layout_constraintEnd_toEndOf="@+id/chatFoldersImageView"
+            app:layout_constraintStart_toStartOf="@+id/chatFoldersImageView"
+            app:layout_constraintTop_toBottomOf="@+id/dataImageView" />
+
+        <ImageView
+            android:id="@+id/chatFoldersImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_folder_open_24"
+            app:layout_constraintBottom_toTopOf="@+id/devicesImageView"
+            app:layout_constraintEnd_toEndOf="@+id/devicesImageView"
+            app:layout_constraintStart_toStartOf="@+id/devicesImageView"
+            app:layout_constraintTop_toBottomOf="@+id/chatSettingsImageView" />
+
+        <ImageView
+            android:id="@+id/devicesImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_baseline_devices_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatFoldersImageView" />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/sounds"
+            app:layout_constraintTop_toBottomOf="@+id/sounds" />
+
+        <TextView
+            android:id="@+id/sounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Notifications and Sounds"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/soundsImageView"
+            app:layout_constraintStart_toEndOf="@+id/soundsImageView"
+            app:layout_constraintTop_toTopOf="@+id/soundsImageView" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/security"
+            app:layout_constraintTop_toBottomOf="@+id/security" />
+
+        <TextView
+            android:id="@+id/security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Privacy and Security"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/securityImageView"
+            app:layout_constraintStart_toEndOf="@+id/securityImageView"
+            app:layout_constraintTop_toTopOf="@+id/securityImageView" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/data"
+            app:layout_constraintTop_toBottomOf="@+id/data" />
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Data and Storage"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dataImageView"
+            app:layout_constraintStart_toEndOf="@+id/dataImageView"
+            app:layout_constraintTop_toTopOf="@+id/dataImageView" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/chatSettings"
+            app:layout_constraintTop_toBottomOf="@+id/chatSettings" />
+
+        <TextView
+            android:id="@+id/chatSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Chat Settings"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chatSettingsImageView"
+            app:layout_constraintStart_toEndOf="@+id/chatSettingsImageView"
+            app:layout_constraintTop_toTopOf="@+id/chatSettingsImageView" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/chatFolders"
+            app:layout_constraintTop_toBottomOf="@+id/chatFolders" />
+
+        <TextView
+            android:id="@+id/chatFolders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Chat Folders"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chatFoldersImageView"
+            app:layout_constraintStart_toEndOf="@+id/chatFoldersImageView"
+            app:layout_constraintTop_toTopOf="@+id/chatFoldersImageView" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/devices"
+            app:layout_constraintTop_toBottomOf="@+id/devices" />
+
+        <TextView
+            android:id="@+id/devices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Devices"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/devicesImageView"
+            app:layout_constraintStart_toEndOf="@+id/devicesImageView"
+            app:layout_constraintTop_toTopOf="@+id/devicesImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

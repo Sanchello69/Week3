@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainFragment">
+
+    <Button
+        android:id="@+id/buttonYandex1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Constrain"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTelegram1"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTelegram1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonTelegram1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTelegram1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 constrain"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalculator1"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalculator1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonCalculator1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonYandex1" />
+
+    <Button
+        android:id="@+id/buttonCalculator1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 constrain"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFacebook1"
+        app:layout_constraintEnd_toEndOf="@+id/buttonFacebook1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonFacebook1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTelegram1" />
+
+    <Button
+        android:id="@+id/buttonFacebook1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="4 constrain"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculator1" />
+
+    <Button
+        android:id="@+id/buttonYandex2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="1 no Constrain"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTelegram2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTelegram2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 no constrain"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalculator2"
+        app:layout_constraintEnd_toEndOf="@+id/buttonYandex2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonYandex2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonYandex2" />
+
+    <Button
+        android:id="@+id/buttonCalculator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 no constrain"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTelegram2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonTelegram2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTelegram2" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalculator2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/buttonCalculator2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculator2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

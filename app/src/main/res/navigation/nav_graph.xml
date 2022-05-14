@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.vas.week3.MainFragment"
+        android:label="AuthorizationFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_yandexFragment1"
+            app:destination="@id/yandexFragment1" />
+        <action
+            android:id="@+id/action_mainFragment_to_yandexFragment2"
+            app:destination="@id/yandexFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_telegramFragment1"
+            app:destination="@id/telegramFragment1" />
+        <action
+            android:id="@+id/action_mainFragment_to_telegramFragment2"
+            app:destination="@id/telegramFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_calculatorFragment1"
+            app:destination="@id/calculatorFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/yandexFragment1"
+        android:name="com.vas.week3.YandexFragment1"
+        android:label="AuthorizationFragment"
+        tools:layout="@layout/fragment_yandex1">
+    </fragment>
+    <fragment
+        android:id="@+id/yandexFragment2"
+        android:name="com.vas.week3.YandexFragment2"
+        android:label="fragment_yandex2"
+        tools:layout="@layout/fragment_yandex2" />
+    <fragment
+        android:id="@+id/telegramFragment1"
+        android:name="com.vas.week3.TelegramFragment1"
+        android:label="fragment_telegram1"
+        tools:layout="@layout/fragment_telegram1" />
+    <fragment
+        android:id="@+id/telegramFragment2"
+        android:name="com.vas.week3.TelegramFragment2"
+        android:label="fragment_telegram2"
+        tools:layout="@layout/fragment_telegram2" />
+    <fragment
+        android:id="@+id/calculatorFragment1"
+        android:name="com.vas.week3.CalculatorFragment1"
+        android:label="fragment_calculator1"
+        tools:layout="@layout/fragment_calculator1" />
+</navigation>
