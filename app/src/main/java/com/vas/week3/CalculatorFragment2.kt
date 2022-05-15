@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 
 class CalculatorFragment2 : Fragment() {
 
@@ -12,7 +13,10 @@ class CalculatorFragment2 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
+        activity?.window?.statusBarColor = ResourcesCompat.getColor(resources,
+            R.color.calculator, null)
+
         return inflater.inflate(R.layout.fragment_calculator2, container, false)
     }
 

@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="telegram">#5b8fbb</color>
     <color name="yandex">#748c84</color>
+    <color name="calculator">#FFFFFF</color>
+    <color name="facebook">#1978f5</color>
 </resources>
