@@ -26,6 +26,12 @@
         <action
             android:id="@+id/action_mainFragment_to_calculatorFragment2"
             app:destination="@id/calculatorFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_facebookFragment1"
+            app:destination="@id/facebookFragment1" />
+        <action
+            android:id="@+id/action_mainFragment_to_facebookFragment2"
+            app:destination="@id/facebookFragment2" />
     </fragment>
     <fragment
         android:id="@+id/yandexFragment1"
@@ -58,4 +64,14 @@
         android:name="com.vas.week3.CalculatorFragment2"
         android:label="fragment_calculator2"
         tools:layout="@layout/fragment_calculator2" />
+    <fragment
+        android:id="@+id/facebookFragment1"
+        android:name="com.vas.week3.FacebookFragment1"
+        android:label="fragment_facebook1"
+        tools:layout="@layout/fragment_facebook1" />
+    <fragment
+        android:id="@+id/facebookFragment2"
+        android:name="com.vas.week3.FacebookFragment2"
+        android:label="fragment_facebook2"
+        tools:layout="@layout/fragment_facebook2" />
 </navigation>

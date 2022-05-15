@@ -41,6 +41,12 @@ class MainFragment : Fragment() {
         binding.buttonCalculator2.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_calculatorFragment2)
         }
+        binding.buttonFacebook1.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_facebookFragment1)
+        }
+        binding.buttonFacebook2.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_facebookFragment2)
+        }
 
         return binding.root
     }
