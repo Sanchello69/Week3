@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_mainFragment_to_calculatorFragment1"
             app:destination="@id/calculatorFragment1" />
+        <action
+            android:id="@+id/action_mainFragment_to_calculatorFragment2"
+            app:destination="@id/calculatorFragment2" />
     </fragment>
     <fragment
         android:id="@+id/yandexFragment1"
@@ -50,4 +53,9 @@
         android:name="com.vas.week3.CalculatorFragment1"
         android:label="fragment_calculator1"
         tools:layout="@layout/fragment_calculator1" />
+    <fragment
+        android:id="@+id/calculatorFragment2"
+        android:name="com.vas.week3.CalculatorFragment2"
+        android:label="fragment_calculator2"
+        tools:layout="@layout/fragment_calculator2" />
 </navigation>

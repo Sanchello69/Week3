@@ -38,6 +38,9 @@ class MainFragment : Fragment() {
         binding.buttonCalculator1.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_calculatorFragment1)
         }
+        binding.buttonCalculator2.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_calculatorFragment2)
+        }
 
         return binding.root
     }
